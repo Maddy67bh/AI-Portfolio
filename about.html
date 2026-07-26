@@ -1,105 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Madiha Mahvish</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 
-<title>About | Madiha Mahvish</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Navbar -->
+<nav class="navbar">
 
-<nav>
-
-<div class="logo">
-Madiha Mahvish
-</div>
+<div class="logo">Madiha Mahvish</div>
 
 <ul>
-
 <li><a href="index.html">Home</a></li>
-
-<li><a href="about.html">About</a></li>
-
+<li><a href="about.html" class="active">About</a></li>
 <li><a href="projects.html">Projects</a></li>
-
 <li><a href="dashboard.html">Dashboard</a></li>
-
+<li><a href="certificates.html">Certificates</a></li>
 <li><a href="contact.html">Contact</a></li>
-
 </ul>
 
 </nav>
 
-<!-- About Section -->
-
 <section class="about">
 
-<div class="glass about-container fade-up">
+<div class="section-title">
+<h1>About Me</h1>
+<p>Passionate about AI, Data Analytics and Technology</p>
+</div>
+
+<div class="about-container">
 
 <div class="about-image">
 
-<img src="assets/images/profile.jpg" alt="Profile">
+<img src="assets/images/profile.png" alt="Profile">
 
 </div>
 
 <div class="about-content">
 
-<h1>About Me</h1>
+<h2>Hello, I'm Madiha Mahvish 👋</h2>
 
 <p>
 
-Hello! I'm <strong>Madiha Mahvish</strong>, an aspiring Data Scientist and AI enthusiast currently pursuing a B.Tech in Data Science. I enjoy solving real-world problems using data, building machine learning models, creating Power BI dashboards, and developing modern web applications.
+I am a B.Tech Data Science student passionate about Artificial Intelligence,
+Machine Learning, Data Analytics and Business Intelligence.
+
+I enjoy transforming raw data into meaningful insights through Python,
+SQL and Power BI dashboards.
+
+Currently, I am building real-world AI projects, strengthening my problem-solving
+skills, and preparing for a career as a Data Analyst while planning for higher
+studies abroad.
 
 </p>
 
-<div class="skills">
-
-<h2>Skills</h2>
-
-<span>Python</span>
-
-<span>SQL</span>
-
-<span>Power BI</span>
-
-<span>Machine Learning</span>
-
-<span>HTML</span>
-
-<span>CSS</span>
-
-<span>JavaScript</span>
-
-<span>Git & GitHub</span>
-
-</div>
-
-<div class="info">
-
-<p><strong>Education:</strong> B.Tech in Data Science</p>
-
-<p><strong>University:</strong> JNTUH</p>
-
-<p><strong>Location:</strong> Hyderabad, India</p>
-
-<p><strong>Email:</strong> your@email.com</p>
-
-</div>
-
-<a href="assets/resume.pdf" class="btn">
+<a href="assets/resume/Madiha_Resume.pdf" class="btn">
 Download Resume
 </a>
 
@@ -109,8 +70,105 @@ Download Resume
 
 </section>
 
-<script src="script.js"></script>
+<section class="timeline">
+
+<h2>Education Journey</h2>
+
+<div class="timeline-card">
+<h3>B.Tech in Data Science</h3>
+<p>DRK Engineering Technology College</p>
+<span>2023 - Present</span>
+</div>
+
+<div class="timeline-card">
+<h3>Python & AI Projects</h3>
+<p>Machine Learning • Power BI • SQL</p>
+<span>2025 - Present</span>
+</div>
+
+</section>
+
+<section class="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skill">
+
+<p>Python</p>
+
+<div class="progress">
+<div style="width:95%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Power BI</p>
+
+<div class="progress">
+<div style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>SQL</p>
+
+<div class="progress">
+<div style="width:88%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>Machine Learning</p>
+
+<div class="progress">
+<div style="width:85%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<p>HTML CSS JavaScript</p>
+
+<div class="progress">
+<div style="width:90%"></div>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+<h1>15+</h1>
+<p>Projects</p>
+</div>
+
+<div class="card">
+<h1>10+</h1>
+<p>Certificates</p>
+</div>
+
+<div class="card">
+<h1>500+</h1>
+<p>GitHub Commits</p>
+</div>
+
+<div class="card">
+<h1>100%</h1>
+<p>Learning Mindset</p>
+</div>
+
+</section>
+
+<script src="js/script.js"></script>
 
 </body>
-
 </html>
