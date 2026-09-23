@@ -1,63 +1,181 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madiha Mahvish | AI Portfolio</title>
-
-  <link rel="stylesheet" href="css/style.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Madiha Mahvish | Data Science & AI/ML</title>
+<meta name="description" content="Madiha Mahvish - Data Science, AI/ML and Data Analytics Portfolio">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#070b12;color:#f5f7fb;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:18px 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(7,11,18,.75);backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+.logo{font-size:22px;font-weight:800;letter-spacing:.5px}
+.logo span{color:#8ab4ff}
+.navlinks{display:flex;gap:28px;color:#c8d0dd;font-size:14px}
+.navlinks a{transition:.3s}
+.navlinks a:hover{color:#fff;transform:translateY(-2px)}
+.menu{display:none;font-size:26px;cursor:pointer}
+section{padding:110px 7%}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;text-align:center;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.28;animation:float 7s ease-in-out infinite}
+.o1{width:280px;height:280px;background:#4c78ff;top:15%;left:8%}
+.o2{width:240px;height:240px;background:#9b59ff;right:8%;bottom:12%;animation-delay:2s}
+.gridbg{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent)}
+.hero-content{position:relative;z-index:2;max-width:950px;animation:heroIn 1s ease}
+.badge{display:inline-block;padding:9px 17px;border:1px solid #ffffff18;border-radius:50px;background:#ffffff08;color:#bfc9d9;font-size:13px;margin-bottom:25px}
+.hero h1{font-size:clamp(42px,7vw,82px);line-height:1.03;letter-spacing:-3px}
+.gradient{background:linear-gradient(90deg,#fff,#9fbaff,#c5a5ff);-webkit-background-clip:text;color:transparent}
+.hero h2{font-size:clamp(20px,3vw,32px);margin:22px 0;color:#b9c2d0;font-weight:500}
+.hero p{max-width:700px;margin:auto;color:#8792a5;line-height:1.8;font-size:16px}
+.buttons{margin-top:32px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn{padding:13px 22px;border-radius:10px;border:1px solid #ffffff1c;background:#ffffff0b;transition:.3s;font-weight:600}
+.btn.primary{background:#fff;color:#070b12}
+.btn:hover{transform:translateY(-4px);box-shadow:0 15px 35px #0008}
+.title{text-align:center;margin-bottom:50px}
+.title small{color:#8ab4ff;text-transform:uppercase;letter-spacing:3px}
+.title h2{font-size:42px;margin-top:10px}
+.title p{color:#8792a5;margin-top:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-text p{color:#9ba6b7;line-height:1.9;margin-bottom:18px}
+.profile{border:1px solid #ffffff14;border-radius:25px;padding:40px;background:linear-gradient(145deg,#111827,#0b1019);text-align:center;animation:cardFloat 5s ease-in-out infinite}
+.avatar{width:140px;height:140px;margin:auto;border-radius:50%;display:grid;place-items:center;font-size:45px;font-weight:800;background:linear-gradient(135deg,#273c78,#704aa8);box-shadow:0 0 60px #526cff44}
+.profile h3{margin-top:22px;font-size:25px}.profile p{color:#8e99aa;margin-top:8px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.skill{padding:22px;text-align:center;border:1px solid #ffffff12;background:#0d131e;border-radius:16px;transition:.35s;color:#cbd3df}
+.skill:hover{transform:translateY(-8px);background:#121a28;border-color:#6f8dff66;box-shadow:0 15px 35px #0006}
+.skill b{display:block;color:#fff;margin-bottom:7px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.project{position:relative;overflow:hidden;border:1px solid #ffffff12;background:#0d131e;border-radius:20px;padding:28px;min-height:270px;transition:.4s}
+.project:before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:#7187ff18;right:-50px;top:-50px;transition:.5s}
+.project:hover{transform:translateY(-10px);border-color:#7187ff55;box-shadow:0 25px 50px #0007}
+.project:hover:before{transform:scale(2)}
+.icon{font-size:38px;margin-bottom:22px}
+.project h3{font-size:21px;margin-bottom:12px}
+.project p{color:#8995a8;line-height:1.7;font-size:14px}
+.tags{margin-top:18px;display:flex;gap:7px;flex-wrap:wrap}
+.tags span{font-size:11px;padding:6px 9px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff12;color:#aeb8c7}
+.timeline{max-width:800px;margin:auto}
+.item{padding:25px 0 25px 30px;border-left:1px solid #ffffff20;position:relative}
+.item:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#8ab4ff;left:-5px;top:32px;box-shadow:0 0 20px #8ab4ff}
+.item h3{font-size:20px}.item p{color:#8d98aa;line-height:1.7;margin-top:8px}
+.contact{text-align:center}
+.contact-box{max-width:800px;margin:auto;padding:45px;border:1px solid #ffffff12;border-radius:25px;background:#0d131e}
+.contact-box p{color:#929dae;line-height:1.8;margin:15px auto 25px}
+footer{text-align:center;padding:35px 7%;border-top:1px solid #ffffff0d;color:#687386;font-size:13px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+@keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,-30px)}}
+@keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:760px){
+.navlinks{display:none;position:absolute;top:70px;left:0;width:100%;padding:25px;flex-direction:column;background:#0b1019;text-align:center}
+.navlinks.open{display:flex}.menu{display:block}
+.about{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.title h2{font-size:34px}section{padding:90px 6%}
+}
+</style>
 </head>
-
 <body>
 
-<nav class="navbar">
-
-<div class="logo">
-Madiha Mahvish
+<nav>
+<a class="logo" href="#home">Madiha<span>.</span></a>
+<div class="navlinks" id="nav">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
 </div>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="dashboard.html">Dashboard</a></li>
-<li><a href="certificates.html">Certificates</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
+<div class="menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</div>
 </nav>
 
-<section class="hero">
-
-<h1>
-Hi, I'm <span>Madiha Mahvish</span>
-</h1>
-
-<h2>
-Data Science Student
-</h2>
-
-<p>
-
-Building AI, Data Analytics, Power BI Dashboards, Python Projects and Interactive Web Applications.
-
-</p>
-
-<a href="projects.html" class="btn">
-View My Projects
-</a>
-
+<section class="hero" id="home">
+<div class="orb o1"></div><div class="orb o2"></div><div class="gridbg"></div>
+<div class="hero-content">
+<div class="badge">🚀 DATA SCIENCE • AI • MACHINE LEARNING</div>
+<h1>Hi, I'm <span class="gradient">Madiha Mahvish</span></h1>
+<h2>Data Science Student & Aspiring AI/ML Professional</h2>
+<p>Building practical solutions with Python, SQL, Machine Learning, NLP, Power BI and Artificial Intelligence — turning data into useful insights and intelligent applications.</p>
+<div class="buttons">
+<a class="btn primary" href="#projects">Explore Projects</a>
+<a class="btn" href="#contact">Let's Connect</a>
+</div>
+</div>
 </section>
 
-<script src="js/script.js"></script>
+<section id="about" class="reveal">
+<div class="title"><small>About Me</small><h2>Building. Learning. Improving.</h2></div>
+<div class="about">
+<div class="about-text">
+<p>I’m a B.Tech Data Science student interested in Data Science, Data Analytics, Artificial Intelligence and Machine Learning.</p>
+<p>I enjoy building practical projects that combine data, machine learning and user-friendly applications. My approach is simple: learn a concept, build something with it, debug it, improve it and build again.</p>
+<p>Currently focused on developing stronger skills in Python, SQL, Machine Learning, NLP, Power BI and end-to-end AI/ML projects.</p>
+</div>
+<div class="profile"><div class="avatar">MM</div><h3>Madiha Mahvish</h3><p>Data Science • AI/ML • Analytics</p></div>
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<div class="title"><small>Technical Skills</small><h2>My Toolkit</h2></div>
+<div class="skills">
+<div class="skill">🐍<b>Python</b>Programming</div>
+<div class="skill">🗄️<b>SQL</b>Data Handling</div>
+<div class="skill">📊<b>Pandas</b>Data Analysis</div>
+<div class="skill">🔢<b>NumPy</b>Numerical Computing</div>
+<div class="skill">🤖<b>Machine Learning</b>Predictive Models</div>
+<div class="skill">🧠<b>AI / NLP</b>BERT & GenAI</div>
+<div class="skill">📈<b>Power BI</b>Business Intelligence</div>
+<div class="skill">⚡<b>Streamlit</b>Data Apps</div>
+<div class="skill">🚀<b>FastAPI</b>APIs</div>
+<div class="skill">🔧<b>GitHub</b>Version Control</div>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<div class="title"><small>Featured Work</small><h2>Projects</h2><p>Practical projects across Data Science, AI and Analytics.</p></div>
+<div class="projects">
+
+<div class="project"><div class="icon">🤖</div><h3>AI Resume Screening using BERT</h3><p>NLP-based resume and job-description matching system using BERT concepts to support automated candidate screening.</p><div class="tags"><span>Python</span><span>BERT</span><span>NLP</span><span>AI</span></div></div>
+
+<div class="project"><div class="icon">💳</div><h3>Credit Risk Prediction System</h3><p>Machine learning project focused on credit-risk analysis and predictive modeling using structured financial data.</p><div class="tags"><span>Python</span><span>ML</span><span>Scikit-learn</span></div></div>
+
+<div class="project"><div class="icon">📉</div><h3>AI Customer Churn Platform</h3><p>Predictive analytics solution designed to identify churn patterns and provide useful customer-retention insights.</p><div class="tags"><span>Python</span><span>ML</span><span>Analytics</span></div></div>
+
+<div class="project"><div class="icon">🛒</div><h3>E-Commerce Sales & Customer Analytics</h3><p>Exploration of sales performance, customer behavior and business trends through data analysis and dashboards.</p><div class="tags"><span>SQL</span><span>Python</span><span>Power BI</span></div></div>
+
+<div class="project"><div class="icon">📈</div><h3>Mutual Fund Analytics Dashboard</h3><p>Interactive financial analytics dashboard for exploring mutual fund data and creating business-focused insights.</p><div class="tags"><span>Power BI</span><span>DAX</span><span>Analytics</span></div></div>
+
+<div class="project"><div class="icon">♻️</div><h3>AI-WasteWise</h3><p>Student innovation project concept focused on smarter waste management, data-driven decisions and environmental impact.</p><div class="tags"><span>AI</span><span>ML</span><span>Streamlit</span></div></div>
+
+</div>
+</section>
+
+<section id="experience" class="reveal">
+<div class="title"><small>Journey</small><h2>Experience & Learning</h2></div>
+<div class="timeline">
+<div class="item"><h3>Data Science Intern — CodeAlpha</h3><p>Working on practical Data Science assignments and projects in a virtual internship environment.</p></div>
+<div class="item"><h3>Data Science with Python & R — RabTech Academy</h3><p>Hands-on work involving reproducible research, statistical analysis and data science workflows.</p></div>
+<div class="item"><h3>Continuous Project Building</h3><p>Developing portfolio projects across Data Analytics, Machine Learning, NLP, AI and Power BI.</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact reveal">
+<div class="title"><small>Contact</small><h2>Let's Connect</h2></div>
+<div class="contact-box">
+<p>Interested in Data Science, AI/ML, Data Analytics or technology? I'm open to internships, entry-level opportunities, collaborations and learning opportunities.</p>
+<div class="buttons">
+<a class="btn primary" href="https://github.com/Maddy67bh" target="_blank">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+<a class="btn" href="mailto:your-email@example.com">Email Me</a>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Madiha Mahvish • Data Science & AI/ML Portfolio</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
+</script>
 
 </body>
-</html></html>
+</html>
