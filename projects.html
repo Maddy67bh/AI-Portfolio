@@ -1,52 +1,100 @@
-<section class="projects" id="projects">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madiha Mahvish | Projects</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b0f19;color:#fff;min-height:100vh}
+nav{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #252b38}
+.logo{font-size:22px;font-weight:700}
+nav a{color:#ddd;text-decoration:none;margin-left:25px}
+nav a:hover{color:#fff}
+.hero{text-align:center;padding:70px 20px 45px}
+.hero h1{font-size:48px;margin-bottom:15px}
+.hero p{color:#aeb6c5;font-size:18px}
+.projects{width:86%;max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;padding-bottom:70px}
+.card{background:#121826;border:1px solid #283143;border-radius:20px;overflow:hidden;transition:.4s;animation:fadeUp .8s ease both}
+.card:hover{transform:translateY(-12px);border-color:#65718a;box-shadow:0 20px 50px #0008}
+.card:nth-child(2){animation-delay:.15s}.card:nth-child(3){animation-delay:.3s}.card:nth-child(4){animation-delay:.45s}.card:nth-child(5){animation-delay:.6s}
+.pic{height:190px;background:linear-gradient(135deg,#202838,#111827);display:flex;align-items:center;justify-content:center;font-size:65px;position:relative;overflow:hidden}
+.pic:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;border:1px solid #ffffff25;animation:pulse 2.5s infinite}
+.content{padding:24px}
+.content h2{font-size:22px;margin-bottom:12px}
+.content p{color:#aeb6c5;line-height:1.6;margin-bottom:18px}
+.tags span{display:inline-block;padding:7px 10px;border:1px solid #354052;border-radius:20px;font-size:12px;margin:3px;color:#d8dee9}
+@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{transform:scale(.8);opacity:.3}50%{transform:scale(1.25);opacity:.8}}
+@media(max-width:700px){.hero h1{font-size:35px}nav{flex-direction:column;gap:15px}nav a{margin:5px}}
+</style>
+</head>
+<body>
 
-<h2>My Projects</h2>
+<nav>
+<div class="logo">Madiha Mahvish</div>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="certificates.html">Certificates</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
 
-<div class="project-container">
+<section class="hero">
+<h1>My Projects</h1>
+<p>Data Science • AI • Machine Learning • Analytics</p>
+</section>
 
-    <div class="project-card">
-        <img src="assets/images/credit-risk.png" alt="AI Credit Risk Assessment">
-        <div class="project-content">
-            <h3>AI Credit Risk Assessment</h3>
-            <p>Machine Learning model to predict credit risk using Python and Logistic Regression.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
+<section class="projects">
 
+<div class="card">
+<div class="pic">🤖</div>
+<div class="content">
+<h2>AI Resume Screening using BERT</h2>
+<p>NLP-based system for matching resumes with job descriptions using BERT.</p>
+<div class="tags"><span>Python</span><span>BERT</span><span>NLP</span><span>AI</span></div>
+</div>
+</div>
 
-    <div class="project-card">
-        <img src="assets/images/powerbi.png" alt="Power BI Dashboard">
-        <div class="project-content">
-            <h3>Power BI Dashboard</h3>
-            <p>Interactive business dashboard with data visualization and analytics.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
+<div class="card">
+<div class="pic">💳</div>
+<div class="content">
+<h2>Credit Risk Prediction</h2>
+<p>Machine learning system for analyzing credit risk and predicting potential risk patterns.</p>
+<div class="tags"><span>Python</span><span>ML</span><span>Scikit-learn</span></div>
+</div>
+</div>
 
+<div class="card">
+<div class="pic">📊</div>
+<div class="content">
+<h2>AI Customer Churn Platform</h2>
+<p>Predictive analytics platform designed to identify customer churn patterns.</p>
+<div class="tags"><span>Python</span><span>ML</span><span>Analytics</span></div>
+</div>
+</div>
 
-    <div class="project-card">
-        <img src="assets/images/python.png" alt="Python Analytics">
-        <div class="project-content">
-            <h3>Python Analytics</h3>
-            <p>Data analysis project using Pandas, NumPy and Matplotlib.</p>
-            <a href="#" class="btn">View Project</a>
-        </div>
-    </div>
+<div class="card">
+<div class="pic">🛒</div>
+<div class="content">
+<h2>E-Commerce Analytics</h2>
+<p>Sales and customer analytics dashboard exploring business trends and customer behavior.</p>
+<div class="tags"><span>Python</span><span>SQL</span><span>Power BI</span></div>
+</div>
+</div>
 
-
+<div class="card">
+<div class="pic">📈</div>
+<div class="content">
+<h2>Mutual Fund Analytics Dashboard</h2>
+<p>Interactive financial analytics dashboard built for exploring mutual fund data.</p>
+<div class="tags"><span>Power BI</span><span>Data Analytics</span><span>DAX</span></div>
+</div>
 </div>
 
 </section>
-
-<div class="project-card">
-<img src="assets/images/project3.svg" alt="Python Analytics">
-<h3>Python Analytics</h3>
-<p>Data analysis using Pandas and Matplotlib.</p>
-</div>
-
-
-<div class="project-card">
-<img src="assets/images/project4.svg" alt="Portfolio Website">
-<h3>Portfolio Website</h3>
-<p>Responsive HTML CSS JavaScript portfolio.</p>
-</div>
+</body>
+</html>
